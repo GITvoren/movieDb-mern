@@ -2,7 +2,7 @@
 
 This project is will be built using MongoDB, NodeJS, Express, and React.
 
-**Currently In Development**
+**Currently In Development . . .**
 
 ## Information
 
