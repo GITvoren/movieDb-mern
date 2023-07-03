@@ -5,9 +5,7 @@
 
 function BgContainer(){
      return(
-          <div>
-
-          </div>
+          <div className="bg-container" />
      );
 }
 

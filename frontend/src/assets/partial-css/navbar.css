@@ -1,0 +1,52 @@
+.navbar-container{
+     background-color: var(--main);
+     color: var(--text);
+}
+
+.navbar-desktop{
+     display: flex;
+     justify-content: space-between;
+     padding: 0.75rem 0.5rem;
+     max-width: 1200px;
+     margin: auto;
+}
+
+.nav-list{
+     display: flex;
+     gap: 1rem;
+}
+.nav-start{
+     display: flex;
+     gap: 3rem;
+     align-items: center;
+}
+.nav-end{
+     display: flex;
+     gap: 1rem;
+     align-items: center;
+}
+
+.nav-end span{
+     font-size: 26px;
+}
+
+.nav-query input,button{
+     border: none;
+     background: transparent;
+}
+
+.nav-query input:focus{
+     color: var(--text);
+     outline: none;
+}
+
+.nav-query{
+     border: 1px solid var(--text);
+     padding: 0.5rem 1rem;
+     border-radius: 16px;
+}
+
+.nav-account{
+     display: flex;
+     gap: 1rem;
+}
