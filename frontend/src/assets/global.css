@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@300&display=swap');
+
+
 :root{
      --main: #1B2129;
      --sub: #101114;
@@ -12,9 +15,14 @@
      box-sizing: border-box;
 }
 
+body{
+     font-family: 'Dosis', sans-serif;
+}
+
 a:-webkit-any-link{
      color: var(--text);
      text-decoration: none;
+     font-size: 18px;
 }
 
 a:-webkit-any-link:hover{

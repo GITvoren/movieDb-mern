@@ -11,7 +11,7 @@ function Navbar(){
                <div className="navbar-desktop">
                     <div className="nav-start">
                          <div className="nav-brand">
-                              <img src="" alt="FLIX-DB" className="nav-brand-img" />
+                              <img src="/images/flix2.png" alt="FLIX-DB" className="nav-brand-img" />
                          </div>
                          <div className="nav-list">    
                               <Link>HOME</Link>
