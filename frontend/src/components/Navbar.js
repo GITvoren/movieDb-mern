@@ -1,11 +1,16 @@
 import navbar from '../assets/partial-css/navbar.css';
 import { Link } from 'react-router-dom';
+import { useState } from 'react';
 
 
 
 
 
 function Navbar(){
+     const [isShown, setIsShown] = useState(false);
+     const [isFocused, setIsFocused] = useState(false);
+     const [query, setQuery] = useState("");
+
      return(
           <div className="navbar-container">
                <div className="navbar-desktop">
@@ -21,10 +26,27 @@ function Navbar(){
                          </div>
                     </div>
                     <div className="nav-end">
-                         <form className="nav-query">
-                              <input type="text" placeholder="Search ..." />
-                              <button>
-                                   <img src="" />
+                         <form className= {isShown || isFocused ? "nav-query nav-query-show" : "nav-query nav-query-hide"}>
+                              <input type="text"
+                              onMouseEnter={() => setIsShown(true)}
+                              onMouseLeave={() => setIsShown(false)}
+                              onFocus= {() => setIsFocused(true)}
+                              onBlur={() => {setIsFocused(false); setQuery("")}}
+                              className= {isShown || isFocused ? "show-input" : "hide-input" } 
+                              placeholder={isShown || isFocused ? "Search ..." : ""}
+                              value={query}
+                              onChange={(e) => setQuery(e.target.value)}
+                              />
+                              <img 
+                              src="/images/clear.png"
+                              className={ isFocused && (query !== "") ? "clear-btn-show" : "clear-btn-hide" }
+                              onClick={ () => setQuery("") }
+                              />
+                              <button
+                              onMouseEnter={() => setIsShown(true)}
+                              onMouseLeave={() => setIsShown(false)}
+                              >
+                                   <img src="/images/search.png" className="search-btn" />
                               </button>  
                          </form>
                          <span>|</span>
