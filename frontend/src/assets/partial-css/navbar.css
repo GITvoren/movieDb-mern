@@ -93,6 +93,7 @@
 }
 
 .clear-btn-hide{
-     height: 0px;
+     visibility: hidden;
+     height: 18px;
      margin-right: 0.25rem;
 }
