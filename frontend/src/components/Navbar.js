@@ -1,6 +1,6 @@
 import navbar from '../assets/partial-css/navbar.css';
 import { Link } from 'react-router-dom';
-import { useState, useRef } from 'react';
+import { useState, useRef, useEffect } from 'react';
 
 
 
@@ -21,6 +21,7 @@ function Navbar(){
                setIsToggled(false)
           }
      }
+
 
 
      return(
@@ -58,7 +59,17 @@ function Navbar(){
                                                        : 
                                                        <img src="/images/down.png" className="nav-arrow" />
                                                   )
-                                             }    
+                                             }
+                                             {
+                                                  isToggled && 
+                                                  <div className="dropdown-list-container">
+                                                       <div className="dropdown-list">
+                                                            <Link>Discussions</Link>
+                                                            <Link>Requests</Link>
+                                                            <Link>Contact</Link>
+                                                       </div>
+                                                  </div> 
+                                             }     
                                         </div>
                                         {isToggled ? <hr className="hr-1"/> : <hr className="hr-2"/> }
                                    </div>
