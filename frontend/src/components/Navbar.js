@@ -40,7 +40,11 @@ function Navbar(){
                               value={query}
                               onChange={(e) => setQuery(e.target.value)}
                               />
-                              <button onClick={(e) => {e.preventDefault(); setQuery(""); ref.current.focus()}}>
+                              <button
+                              onClick={(e) => {e.preventDefault(); setQuery(""); ref.current.focus()}}
+                              onMouseEnter={() => setIsShown(true)}
+                              onMouseLeave={() => setIsShown(false)}
+                              >
                                    <img 
                                    src="/images/clear.png"
                                    className={isFocused && query !== "" ? "clear-btn-show" : "clear-btn-hide" }
