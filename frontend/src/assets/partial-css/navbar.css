@@ -59,12 +59,12 @@
      display: flex;
      justify-content: center;
      align-items: center;
-     padding: 0.5rem 1rem;
+     padding: 0.4rem 1rem;
      border-radius: 16px;
 }
 
 .nav-query-show{
-     border: 1px solid var(--text);
+     border: 1px solid var(--border);
      transition: 0.5s ease-out all;
 
 }
@@ -82,6 +82,7 @@
 .nav-brand-img{
      width: 160px;
      height: 50px;
+     cursor: pointer;
 }
 
 .search-btn{
@@ -101,4 +102,32 @@
      visibility: hidden;
      height: 18px;
      margin-right: 0.25rem;
+}
+
+.dropdown{
+     display: flex;
+     flex-direction: column;
+}
+
+.nav-arrow{
+     height: 16px;
+}
+
+.dropdown-sub{
+     display: flex;
+     align-items: center;
+     gap: 8px;
+}
+
+.hr-1{
+     transform: translateY(0.5rem);
+     color: transparent;
+     border: 1px solid red;
+}
+
+.hr-2{
+     visibility: hidden;
+     transform: translateY(0.5rem);
+     color: transparent;
+     border: 1px solid red;
 }

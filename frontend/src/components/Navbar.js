@@ -11,6 +11,16 @@ function Navbar(){
      const [isFocused, setIsFocused] = useState(false);
      const [query, setQuery] = useState("");
      const ref = useRef(null);
+     const [isHovered, setIsHovered] = useState(false);
+     const [isToggled, setIsToggled] = useState(false);
+
+     const handleToggle = () => {
+          if(!isToggled){
+               setIsToggled(true)
+          } else{
+               setIsToggled(false)
+          }
+     }
 
 
      return(
@@ -20,11 +30,39 @@ function Navbar(){
                          <div className="nav-brand">
                               <img src="/images/flix2.png" alt="FLIX-DB" className="nav-brand-img" />
                          </div>
-                         <div className="nav-list">    
-                              <Link>HOME</Link>
-                              <Link>TV SHOWS</Link>
+                         <div className="nav-list">
                               <Link>MOVIES</Link>
-                              <Link>ALL</Link>
+                              <Link>TV SHOWS</Link>
+                              <Link>UPCOMING</Link>
+                              <Link>
+                                   <div
+                                   className="dropdown"
+                                   onMouseEnter={() => setIsHovered(true)}
+                                   onMouseLeave={() => setIsHovered(false)}
+                                   onClick = {handleToggle}
+                                   >
+                                        <div className="dropdown-sub">
+                                             <span>MORE</span>
+                                             {
+                                                  isToggled ?
+                                                  (
+                                                       isHovered ? 
+                                                       <img src="/images/up-hover.png" className="nav-arrow" /> 
+                                                       : 
+                                                       <img src="/images/up.png" className="nav-arrow" />
+                                                  )
+                                                  :
+                                                  (
+                                                       isHovered ? 
+                                                       <img src="/images/down-hover.png" className="nav-arrow" /> 
+                                                       : 
+                                                       <img src="/images/down.png" className="nav-arrow" />
+                                                  )
+                                             }    
+                                        </div>
+                                        {isToggled ? <hr className="hr-1"/> : <hr className="hr-2"/> }
+                                   </div>
+                              </Link>
                          </div>
                     </div>
                     <div className="nav-end">
@@ -54,6 +92,7 @@ function Navbar(){
                               <button
                               onMouseEnter={() => setIsShown(true)}
                               onMouseLeave={() => setIsShown(false)}
+                              onClick={e => e.preventDefault()}
                               >
                                    <img src="/images/search.png" className="search-btn" />
                               </button>  
