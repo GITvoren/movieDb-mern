@@ -33,6 +33,7 @@ a:-webkit-any-link:hover{
      color: var(--hl2);
 }
 
+
 .bg-container{
      background-image: url('/src/assets/images/bg1.png');
      background-size: cover;
