@@ -1,0 +1,22 @@
+.announcement{
+     display: inline-block;
+     width: 100%;
+     background-color: steelblue;
+     text-align: center;
+     color: #f0f0f0;
+     position: relative;
+}
+
+.announcement>span:nth-child(2){
+     font-weight: bold;
+     color: rgba(223, 245, 97, 0.877);
+}
+
+.ann-close-btn-img{
+     display: block;
+     height: 20px;
+     position: absolute;
+     right: 0;
+     top: 0;
+     cursor: pointer;
+}
