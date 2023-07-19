@@ -5,10 +5,6 @@ function Announcement(){
 
      const [ show, setShow ] = useState(true);
 
-     const close = () => {
-          setShow(false);
-     }
-
      return(
           <div>
           { show &&          
@@ -17,7 +13,7 @@ function Announcement(){
                     <span>In Development . . .</span>
                     <img src="/images/annclose.png"
                     className="ann-close-btn-img"
-                    onClick={close} />
+                    onClick={() => setShow(false)} />
                </span>
           }
           </div>    
