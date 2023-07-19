@@ -1,6 +1,6 @@
 import Navbar from './components/Navbar.js'
 import Footer from './components/Footer.js'
-import BgContainer from './components/BgContainer.js'
+import Container from './components/Container.js'
 import Announcement from './components/Announcement.js'
 
 
@@ -11,9 +11,9 @@ function App(){
     <>
       <Announcement />
       <Navbar />
-      <BgContainer>
+      <Container>
         
-      </BgContainer>
+      </Container>
       <Footer />
     </>
   );

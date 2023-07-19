@@ -19,6 +19,8 @@
 
 body{
      font-family: 'Dosis', sans-serif;
+     background-image: url('/src/assets/images/bg1.png');
+     background-size: cover;
 }
 
 a:-webkit-any-link{
@@ -34,8 +36,9 @@ a:-webkit-any-link:hover{
 }
 
 
-.bg-container{
-     background-image: url('/src/assets/images/bg1.png');
-     background-size: cover;
+.main-container{
+     background-color: rgba(15,15,15,.75);
      min-height: 100vh;
+     max-width: 1200px;
+     margin: 1.5rem auto;
 }
