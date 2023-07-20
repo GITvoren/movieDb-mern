@@ -1,7 +1,7 @@
-import Navbar from './components/Navbar.js'
-import Footer from './components/Footer.js'
-import Container from './components/Container.js'
-import Announcement from './components/Announcement.js'
+import Navbar from './components/Navbar.js';
+import Footer from './components/Footer.js';
+import Announcement from './components/Announcement.js';
+import Hero from './components/Hero.js';
 
 
 
@@ -11,9 +11,9 @@ function App(){
     <>
       <Announcement />
       <Navbar />
-      <Container>
-        
-      </Container>
+      <div className="main-container">
+        <Hero />
+      </div>
       <Footer />
     </>
   );
