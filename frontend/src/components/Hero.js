@@ -6,15 +6,19 @@ import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
 function Hero(){
      return(
           <div className="hero-wrapper">
-               <div className="hero-main-trailer">
-                     <LiteYouTubeEmbed 
-                         id="avz06PDqDbM"
-                         title="Mission Impossible Dead Reckoning Part 1 Trailer"
-                         className="video-player"
-                    />
+               <div>
+                    <div className="hero-main-trailer">
+                         <LiteYouTubeEmbed 
+                              id="avz06PDqDbM"
+                              title="Mission Impossible Dead Reckoning Part 1 Trailer"
+                              className="video-player"
+                         />
+                    </div>
+                    <span className="type-tag">TRAILERS</span>
+                    <h1 className="trailer-title">Mission: Impossible – Dead Reckoning Part One Trailer</h1>
                </div>
                <div className="hero-tabs">
-
+                    
                </div>
           </div>
      )
