@@ -144,25 +144,48 @@
 .link-dropdown{
      display: flex;
      align-items: center;
+     position: relative;
+     
 }
 
 .link-dropdown:after{
      content: '\276F';
-     margin-left: 8px;
+     margin-left: 9px;
      font-size: 18px;
+     font-weight: 200;
      -ms-transform: rotate(90deg);
      -webkit-transform: rotate(90deg);
      transform: rotate(90deg);
+     margin-bottom: 1px;
 }
 
 .link-dropdown:focus-within:after{
      content: '\276E';
-     margin-left: 8px;
+     margin-left: 9px;
      font-size: 18px;
      -ms-transform: rotate(90deg);
      -webkit-transform: rotate(90deg);
      transform: rotate(90deg);
+     margin-bottom: 1px;
 }
+
+/* .link-dropdown:after{
+     position: absolute;
+     border: solid;
+     border-width: 0 0.13em 0.13em 0;
+     content: "";
+     display: inline-block;
+     height: 0.55em;
+     width: 0.55em;
+     right: -1.3rem;
+     top: 2px;
+     transform: rotate(45deg);
+}
+
+.link-dropdown:focus-within:after{
+     top: 9px;
+     transform: rotate(225deg);
+} */
 
 .link-dropdown:focus-within{
      transform: translateY(0.3rem);

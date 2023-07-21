@@ -1,6 +1,7 @@
 import hero from '../assets/partial-css/hero.css';
 import LiteYouTubeEmbed from 'react-lite-youtube-embed';
 import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
+import Tabs from './Tabs.js';
 
 
 function Hero(){
@@ -18,7 +19,7 @@ function Hero(){
                     <h1 className="trailer-title">Mission: Impossible – Dead Reckoning Part One Trailer</h1>
                </div>
                <div className="hero-tabs">
-                    
+                    <Tabs />
                </div>
           </div>
      )

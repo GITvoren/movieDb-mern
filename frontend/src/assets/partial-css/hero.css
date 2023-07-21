@@ -1,6 +1,7 @@
 .hero-wrapper{
      padding: 2rem;
      font-family: 'Nunito Sans', sans-serif;
+     display: flex;
 }
 
 .hero-main-trailer{
