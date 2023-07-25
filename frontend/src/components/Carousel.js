@@ -5,6 +5,12 @@ function Carousel(){
           <div className="carousel-wrapper">
                <h2>Featured Shows</h2>
                <div className="carousel">
+                    <button className="slider-btn left">
+                        <img src="/images/slider-left.png" className="arrow-icon left" />
+                    </button>
+                    <button className="slider-btn right">
+                        <img src="/images/slider-right.png" className="arrow-icon right" />
+                    </button>
                    <img 
                     src="/images/shooter.jpg"
                     className="carousel-img"

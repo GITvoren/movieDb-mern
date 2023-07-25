@@ -3,6 +3,7 @@
      padding: 1.5rem 2rem;
      background-color: var(--main);
      border-radius: 1rem;
+     position: relative;
 }
 
 .carousel-wrapper>h2{
@@ -29,4 +30,38 @@
      display: flex;
      gap: 1.5rem;
      overflow-x: hidden;
+}
+
+.slider-btn{
+     position: absolute;
+     background-color: var(--hl);
+     color: var(--text);
+     top: 55%;
+     border-radius: 25px;
+     width: 46px;
+     height: 46px;    
+}
+
+.slider-btn:hover{
+     cursor: pointer;
+}
+
+.slider-btn.left{
+     left: -1.5rem;
+}
+
+.slider-btn.right{
+     right: -1.5rem;
+}
+
+.arrow-icon{
+     width: 33px;
+}
+
+.arrow-icon.left{
+     transform: translate(-1px, 1px);
+}
+
+.arrow-icon.right{
+     transform: translate(1px, 1px);
 }
