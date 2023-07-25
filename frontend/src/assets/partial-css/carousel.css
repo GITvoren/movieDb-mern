@@ -1,0 +1,32 @@
+.carousel-wrapper{
+     margin: 2rem;
+     padding: 1.5rem 2rem;
+     background-color: var(--main);
+     border-radius: 1rem;
+}
+
+.carousel-wrapper>h2{
+     color: var(--text);
+     margin-bottom: 1.5rem;
+     font-weight: 300;
+     transform: translateX(-1rem);
+}
+
+.carousel-wrapper>h2::before{
+    content: "";
+    border-left: 4px solid var(--hl2);
+    border-radius: 2px;
+    margin-right: 10px;
+}
+
+.carousel-img{
+     height: 250px;
+     width: 175px;
+     border-radius: 6px;
+}
+
+.carousel{
+     display: flex;
+     gap: 1.5rem;
+     overflow-x: hidden;
+}
