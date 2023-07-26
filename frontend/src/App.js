@@ -10,7 +10,7 @@ function App(){
   return (
     <>
       <Announcement />
-    {/*   <Navbar /> */}
+      <Navbar />
       <div className="main-container">
         <Hero />
       </div>
