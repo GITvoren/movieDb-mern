@@ -39,11 +39,14 @@
      top: 55%;
      border-radius: 25px;
      width: 46px;
-     height: 46px;    
+     height: 46px;
+     filter: opacity(0.6);
 }
 
 .slider-btn:hover{
      cursor: pointer;
+     filter: opacity(1);
+     transition: 0.15s ease-in-out all;
 }
 
 .slider-btn.left{
