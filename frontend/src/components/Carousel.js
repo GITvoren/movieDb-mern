@@ -15,7 +15,7 @@ function Carousel(){
 
      const dragStart = (e) => {
           isDragStart = true;
-          prevPageX = e.pageX;
+          prevPageX = e.pageX || e.touches[0].pageX;
           prevScrollLeft = carouselRef.current.scrollLeft;
           carouselRef.current.classList.remove("smooth");
           carouselRef.current.classList.add("not-smooth");
@@ -27,7 +27,7 @@ function Carousel(){
           if(!isDragStart)
           return false;
 
-          let positionDiff = e.pageX - prevPageX;
+          let positionDiff = (e.pageX || e.touches[0].pageX ) - prevPageX;
 
           carouselRef.current.scrollLeft = prevScrollLeft - positionDiff;
      }
@@ -55,11 +55,16 @@ function Carousel(){
           <div className="carousel-wrapper">
                <h2>Featured Shows</h2>
                <div className="carousel"
-               onMouseMove = { dragging } 
                ref= { carouselRef }
-               onMouseDown = { dragStart }
-               onMouseUp = { dragStop }
                onScroll = { reactToScrolling }
+               onMouseMove = { dragging }
+               onTouchMove = { dragging } 
+
+               onMouseDown = { dragStart }
+               onTouchStart = { dragStart }
+
+               onMouseUp = { dragStop }
+               onTouchEnd = { dragStop }
                onMouseLeave = { dragStop }
                >
                     <button 
@@ -79,38 +84,47 @@ function Carousel(){
                    <img 
                     src="/images/shooter.jpg"
                     className="carousel-img"
+                    draggable = "false"
                      />
                     <img 
                     src="/images/last_kingdom.jpg"
                     className="carousel-img"
+                    draggable = "false"
                      />
                     <img 
                     src="/images/unauthorized_living.jpg"
                     className="carousel-img"
+                    draggable = "false"
                      />
                     <img 
                     src="/images/el_dragon.jpg"
                     className="carousel-img"
+                    draggable = "false"
                      />
                     <img 
                     src="/images/valhalla.jpg"
                     className="carousel-img"
+                    draggable = "false"
                      />
                     <img 
                     src="/images/protector.jpg"
                     className="carousel-img"
+                    draggable = "false"
                      />
                     <img 
                     src="/images/blacklist.jpg"
                     className="carousel-img"
+                    draggable = "false"
                      />
                      <img 
                     src="/images/kings.jpg"
                     className="carousel-img"
+                    draggable = "false"
                      />
                     <img 
                     src="/images/vikings.jpg"
                     className="carousel-img"
+                    draggable = "false"
                      />
                </div>
           </div>
