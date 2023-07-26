@@ -1,10 +1,41 @@
 import carousel from '../assets/partial-css/carousel.css';
+import { useRef, useState } from 'react';
 
 function Carousel(){
+     const carouselRef = useRef();
+     let isDragStart = false;
+     let prevPageX;
+     let prevScrollLeft;
+
+     const dragStart = (e) => {
+          isDragStart = true;
+          prevPageX = e.pageX;
+          prevScrollLeft = carouselRef.current.scrollLeft;
+     }
+
+     const dragging = (e) => {
+          if(!isDragStart) return;
+
+          e.preventDefault();
+
+          let positionDiff = e.pageX - prevPageX;
+
+          carouselRef.current.scrollLeft = prevScrollLeft - positionDiff;
+     }
+
+     const dragStop = () => {
+          isDragStart = false;
+     }
+
      return(
           <div className="carousel-wrapper">
                <h2>Featured Shows</h2>
-               <div className="carousel">
+               <div className="carousel"
+               onMouseMove = { dragging } 
+               ref= { carouselRef }
+               onMouseDown = { dragStart }
+               onMouseUp = { dragStop }
+               >
                     <button className="slider-btn left">
                         <img src="/images/slider-left.png" className="arrow-icon left" />
                     </button>

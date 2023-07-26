@@ -8,7 +8,7 @@ import Carousel from './Carousel.js';
 function Hero(){
      return(
           <>
-               <div className="hero-wrapper">
+{/*                <div className="hero-wrapper">
                     <div>
                          <div className="hero-main-trailer">
                               <LiteYouTubeEmbed 
@@ -23,7 +23,7 @@ function Hero(){
                     <div>
                          <Tabs />
                     </div>
-               </div>
+               </div> */}
                <div>
                     <Carousel />
                </div>

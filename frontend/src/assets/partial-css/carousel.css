@@ -24,6 +24,7 @@
      height: 250px;
      width: 175px;
      border-radius: 6px;
+     object-fit: cover;
 }
 
 .carousel{
@@ -62,7 +63,7 @@
 }
 
 .arrow-icon.left{
-     transform: translate(-1px, 1px);
+     transform: translate(-2px, 1px);
 }
 
 .arrow-icon.right{
