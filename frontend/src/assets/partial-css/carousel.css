@@ -33,6 +33,20 @@
      overflow-x: hidden;
 }
 
+.not-smooth{
+     scroll-behavior: auto;
+     cursor: grab;
+}
+
+.smooth{
+     scroll-behavior: smooth;
+}
+
+.carousel.not-smooth .carousel-img{
+     pointer-events: none;
+}
+
+
 .slider-btn{
      position: absolute;
      background-color: var(--hl);
@@ -56,6 +70,14 @@
 
 .slider-btn.right{
      right: -1.5rem;
+}
+
+.d-none{
+     display: none;
+}
+
+.d-block{
+     display: block;
 }
 
 .arrow-icon{
