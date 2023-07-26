@@ -8,7 +8,7 @@ function Carousel(){
      let isDragStart = false;
      let prevPageX;
      let prevScrollLeft;
-     let scrollWidth = carouselRef.current.scrollWidth - carouselRef.current.clientWidth;
+    /*  let scrollWidth = carouselRef.current.scrollWidth - carouselRef.current.clientWidth; */
 
    const [ atStart, setAtStart ] = useState(true);
    const [ atEnd, setAtEnd ] = useState(false);
@@ -48,7 +48,7 @@ function Carousel(){
 
      const reactToScrolling = (e) => {
           setTimeout(() =>  {e.target.scrollLeft !== 0 ? setAtStart(false) : setAtStart(true) }, 250);
-          setTimeout(() =>  {e.target.scrollLeft == scrollWidth ? setAtEnd(true) : setAtEnd(false) }, 250);
+          setTimeout(() =>  {e.target.scrollLeft == 672 ? setAtEnd(true) : setAtEnd(false) }, 250);
      }
 
      return(
