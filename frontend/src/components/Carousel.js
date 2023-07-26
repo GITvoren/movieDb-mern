@@ -8,7 +8,7 @@ function Carousel(){
      let isDragStart = false;
      let prevPageX;
      let prevScrollLeft;
-   /*   let scrollWidth = carouselRef.current.scrollWidth - carouselRef.current.clientWidth; */
+     let scrollWidth = carouselRef.current.scrollWidth - carouselRef.current.clientWidth;
 
    const [ atStart, setAtStart ] = useState(true);
    const [ atEnd, setAtEnd ] = useState(false);
@@ -22,9 +22,10 @@ function Carousel(){
      }
 
      const dragging = (e) => {
+          e.preventDefault();
+
           if(!isDragStart)
           return false;
-          e.preventDefault();
 
           let positionDiff = e.pageX - prevPageX;
 
@@ -37,20 +38,17 @@ function Carousel(){
           carouselRef.current.classList.add("smooth");
      }
 
-     const slideLeft = (e) => {
+     const slideLeft = () => {
           carouselRef.current.scrollLeft -= 350;
      }
 
-     const slideRight = (e) => {
+     const slideRight = () => {
           carouselRef.current.scrollLeft += 350;
      }
 
      const reactToScrolling = (e) => {
-          console.log(e.target.scrollLeft);
           setTimeout(() =>  {e.target.scrollLeft !== 0 ? setAtStart(false) : setAtStart(true) }, 250);
-          setTimeout(() =>  {e.target.scrollLeft == 672 ? setAtEnd(true) : setAtEnd(false) }, 250);
-          ;
-
+          setTimeout(() =>  {e.target.scrollLeft == scrollWidth ? setAtEnd(true) : setAtEnd(false) }, 250);
      }
 
      return(
@@ -62,6 +60,7 @@ function Carousel(){
                onMouseDown = { dragStart }
                onMouseUp = { dragStop }
                onScroll = { reactToScrolling }
+               onMouseLeave = { dragStop }
                >
                     <button 
                     className={atStart? "slider-btn left d-none" : "slider-btn left d-block"}
