@@ -22,7 +22,8 @@ function Carousel(){
      }
 
      const dragging = (e) => {
-          if(!isDragStart) return false;
+          if(!isDragStart)
+          return false;
           e.preventDefault();
 
           let positionDiff = e.pageX - prevPageX;
@@ -46,8 +47,10 @@ function Carousel(){
 
      const reactToScrolling = (e) => {
           console.log(e.target.scrollLeft);
-          e.target.scrollLeft !== 0 ? setAtStart(false) : setAtStart(true);
-          e.target.scrollLeft == 672 ? setAtEnd(true) : setAtEnd(false);
+          setTimeout(() =>  {e.target.scrollLeft !== 0 ? setAtStart(false) : setAtStart(true) }, 250);
+          setTimeout(() =>  {e.target.scrollLeft == 672 ? setAtEnd(true) : setAtEnd(false) }, 250);
+          ;
+
      }
 
      return(
