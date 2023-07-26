@@ -10,8 +10,8 @@ function Carousel(){
      let prevScrollLeft;
    /*   let scrollWidth = carouselRef.current.scrollWidth - carouselRef.current.clientWidth; */
 
-     const [sliderAtStart, setSliderAtStart] = useState(false)
-
+   const [ atStart, setAtStart ] = useState(true);
+   const [ atEnd, setAtEnd ] = useState(false);
 
      const dragStart = (e) => {
           isDragStart = true;
@@ -22,9 +22,7 @@ function Carousel(){
      }
 
      const dragging = (e) => {
-
-          if(!isDragStart) return;
-
+          if(!isDragStart) return false;
           e.preventDefault();
 
           let positionDiff = e.pageX - prevPageX;
@@ -38,12 +36,18 @@ function Carousel(){
           carouselRef.current.classList.add("smooth");
      }
 
-     const slideLeft = () => {
+     const slideLeft = (e) => {
           carouselRef.current.scrollLeft -= 350;
      }
 
-     const slideRight = () => {
+     const slideRight = (e) => {
           carouselRef.current.scrollLeft += 350;
+     }
+
+     const reactToScrolling = (e) => {
+          console.log(e.target.scrollLeft);
+          e.target.scrollLeft !== 0 ? setAtStart(false) : setAtStart(true);
+          e.target.scrollLeft == 672 ? setAtEnd(true) : setAtEnd(false);
      }
 
      return(
@@ -54,18 +58,17 @@ function Carousel(){
                ref= { carouselRef }
                onMouseDown = { dragStart }
                onMouseUp = { dragStop }
+               onScroll = { reactToScrolling }
                >
-                    {
-                         !sliderAtStart &&    <button 
-                                             className="slider-btn left"
-                                             onClick= { slideLeft }
-                                             ref = { leftArrowRef }
-                                             >
-                                                 <img src="/images/slider-left.png" className="arrow-icon left" />
-                                             </button>
-                    }
+                    <button 
+                    className={atStart? "slider-btn left d-none" : "slider-btn left d-block"}
+                    onClick= { slideLeft }
+                    ref = { leftArrowRef }
+                    >
+                    <img src="/images/slider-left.png" className="arrow-icon left" />
+                    </button>
                     <button
-                    className="slider-btn right"
+                    className={atEnd ? "slider-btn right d-none" : "slider-btn right d-block"}
                     onClick= { slideRight }
                     ref = { rightArrowRef }
                     >
