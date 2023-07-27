@@ -1,6 +1,7 @@
 import navbar from '../assets/partial-css/navbar.css';
 import { Link } from 'react-router-dom';
 import { useState, useRef } from 'react';
+import { useMediaQuery } from 'react-responsive';
 
 
 
@@ -11,6 +12,8 @@ function Navbar(){
      const [isFocused, setIsFocused] = useState(false);
      const [query, setQuery] = useState("");
      const ref = useRef(null);
+     const isTabletOrMobile = useMediaQuery({ query: '(max-width: 900px)' });
+     const [ isToggled , setIsToggled ] = useState(false);
 
 
      return(
@@ -36,9 +39,52 @@ function Navbar(){
                                    </div>
                               </Link>
                          </div>
+                         <div className="toggle">
+                              { 
+                              !isToggled ?
+                              <img src="/images/bars.png"
+                               className="bars"
+                               onClick = {() => setIsToggled(!isToggled)} 
+                               />
+                               :
+                               <img src="/images/annclose.png"
+                               className="mobile-close"
+                               onClick = {() => setIsToggled(!isToggled)}
+                                />
+                                }
+
+                              { isToggled && 
+                                   <div className="mobile-nav-list">
+                                        <Link>MOVIES</Link>
+                                        <Link>TV SHOWS</Link>
+                                        <Link>UPCOMING</Link>
+                                        <Link className="link-dropdown">MORE
+                                             <div className="dropdown-sub">
+                                                  <div className="dropdown-list-container">
+                                                       <div className="dropdown-list">
+                                                            <Link className="sub-links" to="#top">Discussions</Link>
+                                                            <Link className="sub-links">Requests</Link>
+                                                            <Link className="sub-links">Contact</Link>
+                                                       </div>
+                                                  </div>    
+                                             </div>
+                                        </Link>
+                                        <hr />
+                                        <div className="mobile-account">
+                                             <div>
+                                                  <Link>Login</Link>
+                                                  <Link>Register</Link>
+                                             </div>
+                                          {/*    <div>
+                                                   <Link>Logout</Link>
+                                             </div> */}
+                                        </div>
+                                   </div>
+                               }
+                         </div>
                     </div>
                     <div className="nav-end">
-                         <form className= {isShown || isFocused ? "nav-query nav-query-show" : "nav-query nav-query-hide"}>
+                         <form className= {isShown || isFocused || isTabletOrMobile ? "nav-query nav-query-show" : "nav-query nav-query-hide"}>
                               <input type="text"
                               ref={ref}
                               onMouseEnter={() => setIsShown(true)}
@@ -46,7 +92,7 @@ function Navbar(){
                               onFocus= {() => setIsFocused(true)}
                               onBlur={() => setIsFocused(false)}
                               className= {isShown || isFocused ? "show-input" : "hide-input" } 
-                              placeholder={isShown || isFocused ? "Search ..." : ""}
+                              placeholder={isShown || isFocused || isTabletOrMobile ? "Search ..." : ""}
                               value={query}
                               onChange={(e) => setQuery(e.target.value)}
                               />
