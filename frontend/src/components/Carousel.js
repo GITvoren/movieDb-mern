@@ -48,7 +48,7 @@ function Carousel(){
 
      const reactToScrolling = (e) => {
           setTimeout(() =>  {e.target.scrollLeft !== 0 ? setAtStart(false) : setAtStart(true) }, 250);
-          setTimeout(() =>  {e.target.scrollLeft == (e.target.scrollLeft - e.target.clientWidth) ? setAtEnd(true) : setAtEnd(false) }, 250);
+          setTimeout(() =>  {e.target.scrollLeft == (e.target.scrollWidth - e.target.clientWidth) ? setAtEnd(true) : setAtEnd(false) }, 250);
      }
 
      return(
