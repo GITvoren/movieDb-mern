@@ -1,0 +1,149 @@
+.slider-container{
+     margin: 32px;
+     position: relative;
+     max-width: 550px;
+}
+
+.slider{
+     overflow: hidden;
+     display: flex;
+     max-width: 550px;
+     
+}
+
+.slider-img-container{
+     position: relative;
+     height: 350px;
+}
+
+.slider-img{
+     width: 550px;
+     height: 100%;
+     object-fit: cover;
+}
+
+.slider-img-container::before{
+     content: "";
+     background-image: url('/src/assets/images/shade.png');
+     position: absolute;
+     padding-bottom: 50px;
+     height: 60px;
+     top: 0;
+     width: 100%;
+     z-index: 12;
+}
+
+.slider-btn-2{
+     position: absolute;
+     background-color: var(--hl);
+     color: var(--text);
+     top: 45%;
+     border-radius: 25px;
+     width: 46px;
+     height: 46px;
+     filter: opacity(0.6);
+     z-index: 12312;
+}
+
+.slider-btn-2:hover{
+     cursor: pointer;
+     filter: opacity(1);
+     transition: 0.15s ease-in-out all;
+}
+
+.slider-btn-2.left{
+     left: 1rem;
+}
+
+.slider-btn-2.right{
+     right: 1rem;
+}
+
+
+.slider-content{
+     position: absolute;
+     width: 95%;
+     background-color: rgba(0, 0, 0, 0.5);
+     bottom: 1.4rem;
+     margin: 0 1rem;
+     height: 110px;
+     border-left: 4px solid var(--hl2);
+     color: var(--text);
+     padding: 0.5rem 1rem;
+     overflow: hidden;
+}
+
+.slider-content__title{
+     font-size: 22px;
+     margin-bottom: 8px;
+}
+
+.slider-content__desc{
+     font-size: 14px;
+     font-weight: 300;
+     text-align: justify;
+}
+
+.dot-container{
+     display: flex;
+     width: fit-content;
+     position: absolute;
+     margin: auto;
+     left: 0;
+     bottom: 1%;
+     right: 0;
+     background-color: rgba(0, 0, 0, 0.5);
+     height: 16px;
+     align-items: center;
+     justify-content: center;
+     border-radius: 8px;
+     padding-inline-start: 5px;
+     padding-inline-end: 5px;
+     z-index: 123123123;
+}
+
+.dot{
+     display: inline-block;
+     border-radius: 10px;
+     width: 8px;
+     height: 8px;
+     margin: 0 10px;
+     background-color: var(--text);
+     cursor: pointer;
+}
+
+.dot.active{
+     background-color: var(--hl2);
+}
+
+@media(max-width: 675px){
+     .slider-container{
+          max-width: 290px;
+     }
+
+     .slider-img{
+          width: 290px;
+     }
+
+     .slider{
+          max-width: 290px;
+     }
+
+     .slider-content{
+          width: 90%;
+     }
+
+     .slider-img{
+          object-fit: fill;
+     }
+     
+     .slider-content__title{
+          font-size: 16px;
+          margin-bottom: 8px;
+     }
+     
+     .slider-content__desc{
+          font-size: 12px;
+          font-weight: 300;
+     }
+}

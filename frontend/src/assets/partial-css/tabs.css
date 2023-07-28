@@ -10,9 +10,13 @@
 .nav-tabs li{
      list-style-type: none;
      padding: 1rem 2.25rem;
-     font-size: 19px;
+     font-size: 17px;
      cursor: pointer;
      font-weight: 300; 
+     width: 150px;
+     display: flex;
+     justify-content: center;
+     align-items: center;
 }
 
 .nav-tabs li:hover{
@@ -43,8 +47,9 @@
 
 @media(max-width: 900px){
      .nav-tabs li{
-          font-size: 16px;
+          font-size: 14px;
           padding: 1rem;
+          width: 100px;
      }
 
      .tabs-container{
