@@ -1,16 +1,17 @@
 .tabs-container{
      min-width: 500px;
+     min-height: 433px;
 }
 
 .nav-tabs{
      display: flex;
-     justify-content: center;
+     justify-content: end;
 }
 
 .nav-tabs li{
      list-style-type: none;
-     padding: 1rem 2.25rem;
-     font-size: 17px;
+     padding: 0.75rem 4.9rem;
+     font-size: 19px;
      cursor: pointer;
      font-weight: 300; 
      width: 150px;
@@ -45,11 +46,11 @@
      display: block;
 }
 
-@media(max-width: 900px){
+@media(max-width: 1150px){
      .nav-tabs li{
           font-size: 14px;
-          padding: 1rem;
           width: 100px;
+          padding: 0.55rem 1rem;
      }
 
      .tabs-container{

@@ -191,7 +191,7 @@
      transform: translateY(0.3rem);
      border-bottom: 2px solid var(--hl2);
      padding-bottom: 0.5rem;
-     z-index: 1;
+     z-index: 999999;
 }
 
 .bars{
@@ -301,7 +301,7 @@
      padding: 1rem 2rem;
      box-shadow: 0 0 5px black;
      border-radius: 3px;
-     z-index: 12;
+     z-index: 999999;
 }
 
 .mobile-nav-list hr{
