@@ -54,7 +54,7 @@ function Slider(){
      useEffect(() => {
           setInterval(() => {
                slideRight();
-          }, 5000)
+          }, 8000)
      }, [])
      
 

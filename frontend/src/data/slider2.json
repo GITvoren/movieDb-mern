@@ -15,5 +15,79 @@
                "title": "'The Devil's Plan' unveils the grand lineup",
                "description": "Netflix has just unveiled its latest survival series, 'The Devil's Plan,' promising an exhilarating competition where only the sharpest minds will thrive for a remarkable prize."
           }
+     ],
+     "trailers": [
+          {    
+               "id": "Tp_YZNqNBhw",
+               "src": "/images/secret_invasion.jpg",
+               "title": "Secret Invasion",
+               "description": "In Marvel Studios’ new series 'Secret Invasion,' set in the present day MCU, Nick Fury learns of a clandestine invasion of Earth by a faction of shapeshifting Skrulls. Fury joins his allies, including Everett Ross, Maria Hill and the Skrull Talos, who has made a life for himself on Earth. Together they race against time to thwart an imminent Skrull invasion and save humanity.",
+               "date": "June 21, 2023"
+          },
+          {
+               "id": "5QNZ44zKzjo",
+               "src": "/images/twisted_metal.jpg",
+               "title": "Twisted Metal Season 1",
+               "description": "John Doe, a motormouthed outsider with no memory of his past, is offered a once-in-a-lifetime opportunity to make his wish of finding community come true, but only if he can successfully deliver a mysterious package across a postapocalyptic wasteland. With the help of Quiet, a trigger-happy car thief searching for revenge, he faces twisted marauders driving vehicles of destruction and other dangers of the open road, including a highway patrolman and a deranged clown who drives an all too familiar ice cream truck.",
+               "date": "July 27, 2023"
+          },
+          {
+               "id": "avz06PDqDbM",
+               "src": "/images/mission_impossible.jpg",
+               "title": "Mission: Impossible - Dead Reckoning",
+               "description": "Ethan Hunt and the IMF team must track down a terrifying new weapon that threatens all of humanity if it falls into the wrong hands. With control of the future and the fate of the world at stake, a deadly race around the globe begins. Confronted by a mysterious, all-powerful enemy, Ethan is forced to consider that nothing can matter more than the mission -- not even the lives of those he cares about most.",
+               "date": "July 12, 2023"
+          },
+          {
+               "id": "0VH9WCFV6XQ",
+               "src": "/images/freddys.jpg",
+               "title": "Five Nights at Freddy's",
+               "description": "A troubled security guard begins working at Freddy Fazbear's Pizzeria. While spending his first night on the job, he realizes the late shift at Freddy's won't be so easy to make it through.",
+               "date": "October 27, 2023"
+          }
+     ],
+     "trendings": [
+          {
+               "src": "/images/oppenheimer.jpg",
+               "title": "Oppenheimer",
+               "date": "July 21, 2023"
+          },
+          {
+               "src": "/images/barbie.jpg",
+               "title": "Barbie",
+               "date": "July 21, 2023"
+          },
+          {
+               "src": "/images/indiana_jones.png",
+               "title": "Indiana Jones and the Dial of Destiny",
+               "date": "June 30, 2023"
+          },
+          {
+               "src": "/images/mission_impossible.jpg",
+               "title": "Mission: Impossible - Dead Reckoning",
+               "date": "July 12, 2023"
+          }
+     ],
+     "populars": [
+          {
+               "src": "/images/got.jpg",
+               "title": "Game of Thrones",
+               "date": "2011 - 2019"
+          },
+          {
+               "src": "/images/stranger_things.jpg",
+               "title": "Stranger Things",
+               "date": "2016 - 2024"
+          },
+          {
+               "src": "/images/breaking_bad.jpg",
+               "title": "Breaking Bad",
+               "date": "2008 - 2013"
+          },
+          {
+               "src": "/images/wd.jpg",
+               "title": "The Walking Dead",
+               "date": "2010 - 2022"
+          }
      ]
 }

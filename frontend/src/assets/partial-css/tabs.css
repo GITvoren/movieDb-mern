@@ -35,18 +35,86 @@
 }
 
 .nav-content{
-     color: rgba(70, 131, 180, 0.61);
-     font-size: 12px;
-     text-align: center;
+     color: var(--text);
      margin-top: 1rem;
      display: none;
+     max-height: 350px;
 }
 
 .nav-content.active{
      display: block;
 }
 
+.hero-main-trailer{
+     height: 175px;
+     max-width: 300px;
+     margin-bottom: 1rem;
+}
+
+.yt-lite{
+     width: 100%;
+     height: 100%;
+     position: relative;
+}
+
+.yt-lite::before{
+     content: "";
+     background-image: url('/src/assets/images/shade.png');
+     position: absolute;
+     padding-bottom: 50px;
+     height: 60px;
+     top: 0;
+     width: 100%;
+}
+
+.tabs-subcontainer{
+     display: flex;
+     width: 470px;
+     height: 100px;
+     gap: 1rem;
+     align-items: center;
+     margin-left: auto;
+}
+
+.tabs-img-container{
+     height: 70px;
+}
+
+.tabs-img{
+     height: 100%;
+     width: 120px;
+}
+
+.tabs-content{
+
+}
+
+.tabs-content>h2{
+     text-align: start;
+     font-size: 20px;
+}
+
+.date-time{
+     color: #A4ADB7;
+     display: flex;
+     align-items: center;
+     gap: 5px;
+}
+
+.date-time img{
+     height: 16px;
+}
+
+.date-time p{
+     font-size: 15px;
+     font-weight: 300;
+}
+
+
 @media(max-width: 1185px){
+     .nav-tabs{
+          justify-content: start;
+     }
      .nav-tabs li{
           font-size: 14px;
           width: 100px;
@@ -56,4 +124,42 @@
      .tabs-container{
           min-width: 300px;
      }
+}
+
+@media(max-width: 1035px){
+     .nav-tabs{
+          justify-content: center;
+     }
+
+     .nav-tabs li{
+          font-size: 18px;
+          width: 150px;
+          padding: 0.75rem 4.9rem;
+     }
+}
+
+@media(max-width: 675px){
+     .nav-tabs li{
+          font-size: 14px;
+          width: 100px;
+          padding: 0.55rem 1rem;
+     }
+
+     .tabs-subcontainer{
+          flex-direction: column;
+          margin-bottom: 3rem;
+          width: auto;
+     }
+
+     .nav-content{
+          min-height: 85vh;
+     }
+     
+     .tabs-content>h2{
+          overflow: hidden;
+          max-width: 250px;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+     }
+
 }
