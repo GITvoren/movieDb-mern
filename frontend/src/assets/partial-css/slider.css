@@ -8,6 +8,7 @@
      overflow: hidden;
      display: flex;
      max-width: 640px;
+     scroll-behavior: smooth;
      
 }
 
@@ -116,7 +117,7 @@
      background-color: var(--hl2);
 }
 
-@media(max-width: 1150px){
+@media(max-width: 1185px){
      .slider-container{
           max-width: 550px;
      }
@@ -132,6 +133,10 @@
 }
 
 @media(max-width: 675px){
+
+     .slider-img-container{
+          height: 350px;
+     }
      .slider-container{
           max-width: 290px;
      }

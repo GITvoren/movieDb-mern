@@ -46,7 +46,7 @@
      display: block;
 }
 
-@media(max-width: 1150px){
+@media(max-width: 1185px){
      .nav-tabs li{
           font-size: 14px;
           width: 100px;

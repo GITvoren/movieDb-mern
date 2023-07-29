@@ -44,7 +44,7 @@
      font-size: 36px;
 }
 
-@media(max-width: 1150px){
+@media(max-width: 1185px){
      .hero-wrapper{
          gap: 2rem;
      }
@@ -55,6 +55,7 @@
      .hero-wrapper{
           flex-direction: column;
           align-items: center;
+          gap: 0;
      }
 
      /* .hero-main-trailer{
