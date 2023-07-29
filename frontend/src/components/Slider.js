@@ -50,7 +50,13 @@ function Slider(){
                sliderRef.current.scrollLeft = (sliderRef.current.scrollWidth - sliderRef.current.clientWidth)
           }
      }
-
+     
+     useEffect(() => {
+          setInterval(() => {
+               slideRight();
+          }, 5000)
+     }, [])
+     
 
 
      return(
