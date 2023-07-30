@@ -56,3 +56,11 @@ a:-webkit-any-link:hover{
           margin: 1.5rem 1rem;
      }
 }
+
+.type-tag{
+     color: #f0f0f0;
+     padding: 8px 1rem;
+     background-color: var(--hl);
+     font-weight: 700;
+     font-size: 14px;
+}

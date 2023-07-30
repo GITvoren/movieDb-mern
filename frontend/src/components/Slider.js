@@ -52,9 +52,10 @@ function Slider(){
      }
      
      useEffect(() => {
-          setInterval(() => {
+         window.interval = setInterval(() => {
                slideRight();
           }, 8000)
+
      }, [])
      
 

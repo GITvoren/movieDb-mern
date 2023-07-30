@@ -45,28 +45,6 @@
      display: block;
 }
 
-.hero-main-trailer{
-     height: 175px;
-     max-width: 300px;
-     margin-bottom: 1rem;
-}
-
-.yt-lite{
-     width: 100%;
-     height: 100%;
-     position: relative;
-}
-
-.yt-lite::before{
-     content: "";
-     background-image: url('/src/assets/images/shade.png');
-     position: absolute;
-     padding-bottom: 50px;
-     height: 60px;
-     top: 0;
-     width: 100%;
-}
-
 .tabs-subcontainer{
      display: flex;
      width: 470px;
@@ -78,6 +56,13 @@
 
 .tabs-img-container{
      height: 70px;
+     position: relative;
+}
+
+.tabs-img-container:hover{
+     transform: scale(1.1);
+     transition: 0.1s;
+     cursor: pointer;
 }
 
 .tabs-img{
@@ -89,10 +74,17 @@
 
 }
 
-.tabs-content>h2{
+.tabs-content>a:-webkit-any-link>h2{
      text-align: start;
      font-size: 20px;
 }
+
+
+.tabs-content>a:-webkit-any-link>h2:hover{
+     color: #E23036;
+     cursor: pointer;
+}
+
 
 .date-time{
      color: #A4ADB7;
@@ -110,6 +102,16 @@
      font-weight: 300;
 }
 
+.play-img{
+     height: 35px;
+     width: 40px;
+     position: absolute;
+     left: 0;
+     right: 0;
+     margin: auto;
+     top: 0;
+     bottom: 0;
+}
 
 @media(max-width: 1185px){
      .nav-tabs{

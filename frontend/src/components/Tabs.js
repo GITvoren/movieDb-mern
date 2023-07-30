@@ -1,6 +1,7 @@
 import tabs from '../assets/partial-css/tabs.css';
 import { useState } from 'react';
 import slider2 from '../data/slider2.json';
+import { Link } from 'react-router-dom';
 
 function Tabs(){
      const { trailers, trendings, populars } = slider2;
@@ -36,9 +37,11 @@ function Tabs(){
                                         className="tabs-img"
                                         draggable = "false"
                                          />
+                                         <img src="/images/play.png"
+                                         className="play-img" />
                                    </div>
                                    <div className="tabs-content">
-                                        <h2>{trailer.title}</h2>
+                                   <Link to={`/trailers/${trailer.id}`}><h2>{trailer.title}</h2></Link>
                                         <div className="date-time">
                                              <img src="/images/clock.png" />
                                              <p>{trailer.date}</p>
@@ -60,7 +63,7 @@ function Tabs(){
                                          />
                                    </div>
                                    <div className="tabs-content">
-                                        <h2>{trending.title}</h2>
+                                        <Link><h2>{trending.title}</h2></Link>
                                         <div className="date-time">
                                              <img src="/images/clock.png" />
                                              <p>{trending.date}</p>
@@ -82,7 +85,7 @@ function Tabs(){
                                          />
                                    </div>
                                    <div className="tabs-content">
-                                        <h2>{popular.title}</h2>
+                                        <Link><h2>{popular.title}</h2></Link>
                                         <div className="date-time">
                                              <img src="/images/clock.png" />
                                              <p>{popular.date}</p>
