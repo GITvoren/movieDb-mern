@@ -157,7 +157,7 @@
           min-height: 85vh;
      }
      
-     .tabs-content>h2{
+     .tabs-content>a:-webkit-any-link>h2{
           overflow: hidden;
           max-width: 250px;
           text-overflow: ellipsis;
