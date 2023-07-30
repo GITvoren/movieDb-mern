@@ -32,6 +32,7 @@ function Tabs(){
 
                     {trailers.map(trailer => (
                               <div className="tabs-subcontainer" key = {trailer.id}>
+                                  <Link to={`/trailers/${trailer.id}`}>
                                    <div className="tabs-img-container">
                                         <img src={trailer.src}
                                         className="tabs-img"
@@ -40,6 +41,7 @@ function Tabs(){
                                          <img src="/images/play.png"
                                          className="play-img" />
                                    </div>
+                                   </Link>
                                    <div className="tabs-content">
                                    <Link to={`/trailers/${trailer.id}`}><h2>{trailer.title}</h2></Link>
                                         <div className="date-time">

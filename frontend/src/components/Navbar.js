@@ -20,9 +20,11 @@ function Navbar(){
           <div className="navbar-container">
                <div className="navbar-desktop">
                     <div className="nav-start">
-                         <div className="nav-brand">
-                              <img src="/images/flix2.png" alt="FLIX-DB" className="nav-brand-img" />
-                         </div>
+                         <Link to="/">
+                              <div className="nav-brand">
+                                   <img src="/images/flix2.png" alt="FLIX-DB" className="nav-brand-img" />
+                              </div>
+                         </Link>
                          <div className="nav-list">
                               <Link>MOVIES</Link>
                               <Link>TV SHOWS</Link>
