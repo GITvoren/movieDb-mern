@@ -1,12 +1,15 @@
 const router = require('express').Router();
 
 const {
-     registerUser
+     registerUser,
+     loginUser
 } = require('../controllers/userController.js');
 
 
 
-router.get('/', registerUser);
+router.get('/register', registerUser);
+
+router.get('/login', loginUser);
 
 
 module.exports = router;
