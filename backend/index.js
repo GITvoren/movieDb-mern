@@ -17,7 +17,9 @@ db.once('open', () => console.log('Successfully connected to MongoDB Database'))
 
 // main routes
 const userRoutes = require('./routes/userRoutes.js');
+const movieRoutes = require('./routes/movieRoutes.js');
 app.use('/users', userRoutes);
+app.use('/movies', movieRoutes);
 
 app.listen(port, () => {
      console.log(`Listening to requests at port ${port}`);
