@@ -1,15 +1,15 @@
 const mongoose = require('mongoose');
 
-const userSchema = new mongoose.Schema({
-     username: {
+const movieSchema = new mongoose.Schema({
+     title: {
           type: String,
           required: true
      },
-     password: {
+     synopsis: {
           type: String,
           required: true
      },
-     dateRegistered: {
+     releaseDate: {
           type: Date,
           default: Date.now
      }
@@ -18,4 +18,4 @@ const userSchema = new mongoose.Schema({
 }/* , {timestamps: true} */);
 
 
-module.exports = mongoose.model("User", userSchema);
+module.exports = mongoose.model("Movie", movieSchema);
