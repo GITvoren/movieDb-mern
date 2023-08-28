@@ -12,7 +12,7 @@ const movieSchema = new mongoose.Schema({
      releaseDate: {
           type: Date,
           default: Date.now
-     }
+     }//genres, ratings, cast
 
 
 }/* , {timestamps: true} */);

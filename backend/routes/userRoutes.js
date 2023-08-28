@@ -1,4 +1,5 @@
-const router = require('express').Router();
+const express = require('express');
+const router = express.Router();
 
 const {
      registerUser,
@@ -7,9 +8,9 @@ const {
 
 
 
-router.get('/register', registerUser);
+router.post('/register', registerUser);
 
-router.get('/login', loginUser);
+router.post('/login', loginUser);
 
 
 module.exports = router;
